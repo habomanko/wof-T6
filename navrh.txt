@@ -1,0 +1,95 @@
+dvere
+    - zamykatelne
+    - heslo
+    - kluc/isic v inych miestnostiach
+
+predmety
+    - kluc/isic
+    - inventar
+    - index
+    - zbrane
+        - knihy - hadzeme
+        - dezinfekcia
+    - rusko
+    - borovicka - zvysuje odolnost voci virusu - docasne
+        - transport na nahodnu lokaciu
+    - akcie:
+        - pouzitie
+        - zdvihnut
+            > zober rusko
+        - polozit
+            > poloz rusko
+
+mena
+    - najom za internat
+
+doprava
+    - prevoz autobusom (kombinacie)
+
+charakteristiky hraca
+    - meno
+    - skore
+    - zivoty
+    - odolnost voci virusu
+
+npc - postavy mimo hraca
+    - prisery
+        - virus
+
+obchod
+    - bufet
+    > nakupuj menonpc
+
+zmena opatreni
+    - po casovom intervale
+
+questy
+    - prezentacia z ekonomiky
+
+achievement
+    - jedz iba pizzu z bufetu
+
+----------------------
+rozhovor s vratnickou:
+> hovor vratnicka
+Ahoj, ja som tu nejaka vratnicka. A ty si?
+> Jozo
+Tak cau.
+1. Ako sa mas?
+2. Nemas pre mna nejaku ulohu?
+0. Ukoncit rozhovor
+Vyber moznost > 1
+Vsetko ma boli, tak nezavadzaj
+0. Ukonci rozhovor
+
+> hovor vratnicka
+Ahoj, ja som tu nejaka vratnicka. A ty si?
+> Jozo
+Tak cau.
+1. Ako sa mas?
+2. Nemas pre mna nejaku ulohu?
+0. Ukoncit rozhovor
+Vyber moznost > 2
+Tak ja neviem, dones mi aspirin.
+1. Lekarne zavreli kvoli covid
+2. Skusim nejaky najst
+0. Ukonci rozhovor
+Vyber moznost > 1
+Joj, tak padaj prec.
+0. Ukonci rozhovor
+
+> hovor vratnicka
+Ahoj, ja som tu nejaka vratnicka. A ty si?
+> Jozo
+Tak cau.
+1. Ako sa mas?
+2. Nemas pre mna nejaku ulohu?
+0. Ukoncit rozhovor
+Vyber moznost > 2
+Tak ja neviem, dones mi aspirin.
+1. Lekarne zavreli kvoli covid
+2. Skusim nejaky najst
+0. Ukonci rozhovor
+Vyber moznost > 2
+Ach to budes zlaty.
+0. Ukonci rozhovor
