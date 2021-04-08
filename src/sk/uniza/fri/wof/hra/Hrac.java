@@ -1,20 +1,31 @@
 package sk.uniza.fri.wof.hra;
 
-import sk.uniza.fri.wof.prostredie.*;
+import sk.uniza.fri.wof.prostredie.Miestnost;
+import sk.uniza.fri.wof.prostredie.Prostredie;
+import sk.uniza.fri.wof.prostredie.Quest;
 import sk.uniza.fri.wof.prostredie.predmety.IKontrolaPolozenia;
 import sk.uniza.fri.wof.prostredie.predmety.IPredmet;
-import sk.uniza.fri.wof.prostredie.predmety.PortalGun;
 
+import java.util.ArrayList;
 import java.util.TreeMap;
 
 public class Hrac {
     private final TreeMap<String, IPredmet> inventar;
+    private final ArrayList<Quest> questy;
     private Miestnost aktualnaMiestnost;
 
     public Hrac(Prostredie prostredie) {
         this.aktualnaMiestnost = prostredie.getStartovaciaMiestnost();
         this.inventar = new TreeMap<>();
+        questy = new ArrayList<>();
     }
+
+
+    public void addQuest(Quest quest) {
+        this.questy.add(quest);
+    }
+
+
 
     public Miestnost getAktualnaMiestnost() {
         return this.aktualnaMiestnost;

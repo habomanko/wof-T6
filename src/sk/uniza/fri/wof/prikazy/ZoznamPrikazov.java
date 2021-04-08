@@ -136,7 +136,7 @@ public class ZoznamPrikazov {
     private void hovorSNpc(Prikaz prikaz, Hrac hrac) {
         Npc npc = hrac.getAktualnaMiestnost().getNpc(prikaz.getParameter());
         if (npc instanceof NpcDialogove) {
-            ((NpcDialogove)npc).hovor();
+            ((NpcDialogove)npc).hovor(hrac);
         } else {
             System.out.printf("S %s sa neda hovorit!%n", prikaz.getParameter());
         }

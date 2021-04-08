@@ -1,7 +1,6 @@
 package sk.uniza.fri.wof.prostredie;
 
 import sk.uniza.fri.wof.prostredie.npc.*;
-import sk.uniza.fri.wof.prostredie.predmety.Portal;
 import sk.uniza.fri.wof.prostredie.predmety.PortalGun;
 import sk.uniza.fri.wof.prostredie.predmety.Predmet;
 import sk.uniza.fri.wof.prostredie.predmety.PredmetRusko;
@@ -64,6 +63,12 @@ public class Prostredie {
 
         NpcDialogVrchol korenDialogovehoStromuBufetarka = new NpcDialogVrchol("Zatial nemas naprogramovane predmety, tak sa s tebou nebavim");
         vestibula.postavNpc(new NpcDialogove("bufetarka", korenDialogovehoStromuBufetarka));
+
+
+
+        NpcDialogQuest korenDialogovehoStromuUcitel = new NpcDialogQuest("Uz meskas na prezentaciu", new Quest("prezentacia", ra6));
+
+        vestibula.postavNpc(new NpcDialogove("ucitel", korenDialogovehoStromuUcitel));
 
         //vestibula.polozPredmet(new PredmetRusko());
         vestibula.polozPredmet(new Predmet("index"));
