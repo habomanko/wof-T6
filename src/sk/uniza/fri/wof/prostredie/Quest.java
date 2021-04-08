@@ -14,10 +14,18 @@ public class Quest {
         this.miestnostVykonavania = miestnostVykonavania;
     }
 
-    public void overDokoncenie(Hrac hrac) {
+    public void overDokoncenieVstupomDoMiestnosti(Hrac hrac) {
         if (hrac.getAktualnaMiestnost() == this.miestnostVykonavania && !this.jeDokonceny) {
             this.jeDokonceny = true;
-            System.out.printf("Prave si dokoncil quest %s.", this.nazovQuestu);
+            System.out.printf("Prave si dokoncil quest %s.%n", this.nazovQuestu);
+            hrac.odstranQuest(this);
+        }
+    }
+
+
+    public void hracVosielDoMiestnosti(Miestnost miestnost) {
+        if (miestnost.getPopis().startsWith("RA006")) {
+            System.out.println("Vyriesil si quest");
         }
     }
 

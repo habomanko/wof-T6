@@ -16,8 +16,13 @@ public class NpcDialogQuest implements INpcDialogVrchol {
     }
 
     public INpcDialogVrchol vykonaj(Hrac hrac) {
-        System.out.println(this.replikaNpc);
-        hrac.addQuest(this.quest);
+        if (this.quest != null) {
+            System.out.println(this.replikaNpc);
+            hrac.addQuest(this.quest);
+            this.quest = null;
+        } else {
+            System.out.println("Uz ti nemam co povedat.");
+        }
         return null;
     }
 

@@ -17,7 +17,7 @@ public class Hrac {
     public Hrac(Prostredie prostredie) {
         this.aktualnaMiestnost = prostredie.getStartovaciaMiestnost();
         this.inventar = new TreeMap<>();
-        questy = new ArrayList<>();
+        this.questy = new ArrayList<>();
     }
 
 
@@ -25,6 +25,11 @@ public class Hrac {
         this.questy.add(quest);
     }
 
+
+    public void odstranQuest(Quest quest) {
+        this.questy.remove(quest);
+
+    }
 
 
     public Miestnost getAktualnaMiestnost() {
@@ -43,6 +48,15 @@ public class Hrac {
         }
 
         this.aktualnaMiestnost = novaMiestnost;
+
+
+
+
+        ArrayList<Quest> tempQests = new ArrayList<>(this.questy);
+        for (Quest questAktualy : tempQests) {
+            questAktualy.overDokoncenieVstupomDoMiestnosti(this);
+        }
+
         return true;
     }
 
@@ -87,5 +101,11 @@ public class Hrac {
 
         predmet.pouziSa(this);
         return true;
+    }
+
+    public void zobrazQuesty() {
+        for (Quest quest : this.questy) {
+            System.out.println(quest.getNazovQuestu());
+        }
     }
 }

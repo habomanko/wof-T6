@@ -19,7 +19,7 @@ public class ZoznamPrikazov {
     // konstantne pole nazvov prikazov
     private static final String[] PLATNE_PRIKAZY = {
         "chod", "ukonci", "pomoc", "hovor", "zober", "poloz", "pouzi",
-        "nakupuj"
+        "nakupuj", "questy"
     };
 
     /**
@@ -76,9 +76,17 @@ public class ZoznamPrikazov {
                 return false;
             case "nakupuj":
                 this.nakupujUNpc(prikaz, hrac);
+                return false;
+            case "questy":
+                this.questy(prikaz, hrac);
+                return false;
             default:
                 return false;
         }
+    }
+
+    private void questy(Prikaz prikaz, Hrac hrac) {
+        hrac.zobrazQuesty();
     }
 
     /**
