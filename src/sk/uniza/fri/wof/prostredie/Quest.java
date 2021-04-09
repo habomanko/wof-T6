@@ -7,9 +7,11 @@ public class Quest {
     private String nazovQuestu;
     private boolean jeDokonceny;
     private Miestnost miestnostVykonavania;
+    private String spravaPriVstupDoMiestnosti;
 
-    public Quest(String nazovQuestu, Miestnost miestnostVykonavania) {
+    public Quest(String nazovQuestu, Miestnost miestnostVykonavania, String spravaPriVstupDoMiestnosti) {
         this.nazovQuestu = nazovQuestu;
+        this.spravaPriVstupDoMiestnosti = spravaPriVstupDoMiestnosti;
         this.jeDokonceny = false;
         this.miestnostVykonavania = miestnostVykonavania;
     }
@@ -23,17 +25,21 @@ public class Quest {
     }
 
 
-    public void hracVosielDoMiestnosti(Miestnost miestnost) {
-        if (miestnost.getPopis().startsWith("RA006")) {
-            System.out.println("Vyriesil si quest");
-        }
-    }
 
-    public boolean isJeDokonceny() {
+
+
+
+    public boolean jeDokonceny() {
         return this.jeDokonceny;
     }
 
     public String getNazovQuestu() {
         return this.nazovQuestu;
+    }
+
+    public void vstupDoMiestnosti(Hrac hrac) {
+        if (hrac.getAktualnaMiestnost() == this.miestnostVykonavania && !this.jeDokonceny) {
+            System.out.println(this.spravaPriVstupDoMiestnosti);
+        }
     }
 }

@@ -54,7 +54,7 @@ public class Hrac {
 
         ArrayList<Quest> tempQests = new ArrayList<>(this.questy);
         for (Quest questAktualy : tempQests) {
-            questAktualy.overDokoncenieVstupomDoMiestnosti(this);
+            questAktualy.vstupDoMiestnosti(this);
         }
 
         return true;

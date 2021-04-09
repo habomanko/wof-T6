@@ -65,8 +65,9 @@ public class Prostredie {
         vestibula.postavNpc(new NpcDialogove("bufetarka", korenDialogovehoStromuBufetarka));
 
 
+        Quest prezentacia = new Quest("prezentacia", ra6, "Teraz spusti prezentaciu.");
 
-        NpcDialogQuest korenDialogovehoStromuUcitel = new NpcDialogQuest("Uz meskas na prezentaciu", new Quest("prezentacia", ra6));
+        NpcDialogQuest korenDialogovehoStromuUcitel = new NpcDialogQuest("Uz meskas na prezentaciu", prezentacia);
 
         vestibula.postavNpc(new NpcDialogove("ucitel", korenDialogovehoStromuUcitel));
 
@@ -76,6 +77,7 @@ public class Prostredie {
         vestibula.postavNpc(new NpcObchodnik("fero", new PredmetRusko(), new Predmet("borovicka")));
 
         ic.nastavVychod("zapad", vestibula);
+        ic.polozPredmet(new PredmetUSB(prezentacia));
 
         wcC.nastavVychod("vychod", chodbaC);
 
